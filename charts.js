@@ -102,14 +102,17 @@ function buildCharts(sample) {
       x: values,
       y: yticks,
       type: "bar",
-      orientation: "h"
+      orientation: "h",
     };
 
     // Deliverable 1: 9. Create the layout for the bar chart. 
     var barLayout = {
       xaxis: {title: "Sample Values"},
       yaxis: {title: "OTU-ID Numbers"},
-      title: "Top 10 Bacteria Cultures Found"
+      title: "Top 10 Bacteria Cultures Found",
+      color: "orange",
+      font: {color: "rgb(226, 27, 226)"},
+      paper_bgcolor:'rgb(160, 244, 161)'
     };
 
     // Deliverable 1: 10. Use Plotly to plot the data with the layout. 
@@ -131,8 +134,10 @@ var bubbleData = {
 var bubbleLayout = {
   xaxis: {title: "OTU ID"},
   yaxis: {title: "Sample Values"},
+  font: {color: "rgb(226, 27, 226)"},
   hovermode: "closest",
-  title: "Bacteria Cultures Per Sample"
+  title: "Bacteria Cultures Per Sample",
+  paper_bgcolor:'rgb(160, 244, 161)'
 };
     // Deliverable 2: 3. Use Plotly to plot the data with the layout.
 Plotly.newPlot("bubble", [bubbleData], bubbleLayout);
@@ -142,7 +147,7 @@ Plotly.newPlot("bubble", [bubbleData], bubbleLayout);
     {
       domain: {x: [], y: []},
       value: wFrq,
-      title: '<b>"Belly Button Washing Frequency"</b> <br> <b>Scrub Per Week</b>}',
+      title: '<b>"Belly Button Washing Frequency"</b> <br> <b>Scrub Per Week</b>',
       type: "indicator", 
       mode: "gauge+number",
       gauge: {
@@ -162,7 +167,8 @@ Plotly.newPlot("bubble", [bubbleData], bubbleLayout);
 
     // Deliverable 3: 5. Create the layout for the gauge chart.
   var layoutGauge = {
-    font: {color: "dodgerblue"}
+    font: {color: "rgb(226, 27, 226)"},
+  paper_bgcolor:'rgb(160, 244, 161)'
   };
 
     // Deliverable 3: 6. Use Plotly to plot the gauge data and layout.
