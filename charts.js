@@ -73,7 +73,7 @@ function buildCharts(sample) {
     var resultMeta = metadata.filter(sampleObj => sampleObj.id == sample);
   
     // Deliverable 1: 5. Create a variable that holds the first sample in the array.  
-    var firstResultSample = resultSample[0]
+    var firstResultSample = resultSample[0];
    console.log(firstResultSample);
 
     // Deliverable 3: 2. Create a variable that holds the first sample in the metadata array.    
@@ -99,7 +99,7 @@ function buildCharts(sample) {
 
     // Deliverable 1: 8. Create the trace for the bar chart. 
     var barData = {
-      x: values,
+      x: values.slice(0, 10).reverse(),
       y: yticks,
       type: "bar",
       orientation: "h",
@@ -147,7 +147,7 @@ Plotly.newPlot("bubble", [bubbleData], bubbleLayout);
     {
       domain: {x: [], y: []},
       value: wFrq,
-      title: '<b>"Belly Button Washing Frequency"</b> <br> <b>Scrub Per Week</b>',
+      title: '<b>"Belly Button Washing Frequency"</b> <br> <b>Scrubs Per Week</b>',
       type: "indicator", 
       mode: "gauge+number",
       gauge: {
